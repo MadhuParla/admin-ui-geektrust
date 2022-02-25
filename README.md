@@ -1,122 +1,22 @@
-In this project, let's build a **Simple Todos** app by applying the concepts we have learned till now.
 
-### Refer to the image below:
+In this project, let's build a Admin UI by using the React js concepts.
 
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/simple-todos-output.gif" alt="simple todos output" style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
+(https://user-images.githubusercontent.com/89067902/155120034-edf14407-a59c-464a-a5fb-e923662f937e.png)
 
-### Design Files
+Set Up Instructions:
 
-<details>
-<summary>Click to view</summary>
+Download dependencies by running npm install Start up the app using npm start Use third-party-packages are npm install styled-components --save, npm install react-loader-spinner --save used in out projects . Admin Component
 
-- [Extra Small (Size < 576px) and Small (Size >= 576px)](https://assets.ccbp.in/frontend/content/react-js/simple-todos-sm-output-v2.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)](https://assets.ccbp.in/frontend/content/react-js/simple-todos-lg-output-v2.png)
+In this UI , we can select user by searching with name, email, role. And Also User able to Edit the data. User can select users, can also able to select multiple users User can also delete by selecting multiple users User can view 10 users at atime User can easily navigate to next pages by using Pagination Individual Users also we can delete from the list of users. User Component
 
-</details>
+In this Component We can implement with class Component User can click on checkbox, means we are selecting user. This contains name, email, role, and also checkbox and delete icon along with edit icon. If we click on click edit button we cam able to edit user Details Pagination Component
 
-### Set Up Instructions
+Pagination Component contains currentPagesCount, currentPage, nextPagesCount, previousPageCount By using this we are navigate to forward, backward, previous, starting pages easily This can be achieved by using third-party package Pagination , provided by React A User can see multiple pages based on PageNumbers available in the bottom of a Admin Component. AdminApiUrl
 
-<details>
-<summary>Click to view</summary>
+API: "https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json" Description: Returns a response based on the credentials provided
 
-- Download dependencies by running `npm install`
-- Start up the app using `npm start`
-</details>
+Sample Success Response [ { "id": "1", "name": "Aaron Miles", "email": "aaron@mailinator.com", "role": "member" }, { "id": "2", "name": "Aishwarya Naik", "email": "aishwarya@mailinator.com", "role": "member" }, { "id": "3", "name": "Arvind Kumar", "email": "arvind@mailinator.com", "role": "admin" } ]
 
-### Completion Instructions
+Important Instructions:
 
-<details>
-<summary>Functionality to be added</summary>
-<br/>
-
-The app must have the following functionalities
-
-- Initially, the list of given todos should be displayed with a delete button for each todo
-- When **Delete** button of a todo is clicked, then the respective todo should be deleted
-- The `SimpleTodos` will consist of the `initialTodosList`. It consists of a list of todo objects with the following properties in each todo object
-
-  |  Key  | Data Type |
-  | :---: | :-------: |
-  |  id   |  Number   |
-  | title |  String   |
-
-</details>
-
-<details>
-<summary>Components Structure</summary>
-
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/simple-todos-component-structure.png" alt="simple todos component structure" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
-
-</details>
-
-<details>
-<summary>Implementation Files</summary>
-<br/>
-
-Use these files to complete the implementation:
-
-- `src/components/SimpleTodo/index.js`
-- `src/components/SimpleTodo/index.css`
-- `src/components/TodoItem/index.js`
-- `src/components/TodoItem/index.css`
-</details>
-
-### Quick Tips
-
-<details>
-<summary>Click to view</summary>
-<br>
-
-- You can use the `cursor` CSS property to specify the mouse cursor to be displayed when pointing over an element
-
-  ```
-    cursor: pointer;
-  ```
-
-  <br/>
-   <img src="https://assets.ccbp.in/frontend/content/react-js/cursor-pointer-img.png" alt="cursor pointer" style="width:100px" />
-
-- You can use the below `outline` CSS property for buttons and input elements to remove the highlighting when the elements are clicked
-
-  ```
-    outline: none;
-  ```
-
-</details>
-
-### Resources
-
-<details>
-<summary>Colors</summary>
-
-<br/>
-
-<div style="background-color: #ffc2a0; width: 150px; padding: 10px; color: black">Hex: #ffc2a0</div>
-<div style="background-color: #ffffff; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
-<div style="background-color: #ff8542; width: 150px; padding: 10px; color: white">Hex: #ff8542</div>
-<div style="background-color: #000000; width: 150px; padding: 10px; color: white">Hex: #000000</div>
-<div style="background-color: #ff0b37; width: 150px; padding: 10px; color: white">Hex: #ff0b37</div>
-
-</details>
-
-<details>
-<summary>Font-families</summary>
-
-- Roboto
-
-</details>
-
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
+Wrap the Loader component with an HTML container element and add the testid attribute value as loader to it
