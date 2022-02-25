@@ -22,8 +22,7 @@
 
 .edit-delate-container {
   display: flex;
-  width: 6vw;
-  justify-content: space-around;
+  align-items: center;
 }
 
 .save-button {
@@ -37,6 +36,8 @@
   font-family: 'Roboto';
   font-size: 16px;
   color: aliceblue;
+  outline: none;
+  cursor: pointer;
 }
 
 .edit-user-container {
@@ -65,4 +66,18 @@
 .delete-icon {
   color: crimson;
   font-size: 20px;
+}
+
+.delete-button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.edit-icon-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
 }

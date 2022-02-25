@@ -48,7 +48,7 @@ class Users extends Component {
     })
   }
 
-  onClickEdit = () => {
+  onClickEditButton = () => {
     const {users} = this.props
     const {name, email, role} = users
     this.setState(prevState => ({
@@ -59,13 +59,13 @@ class Users extends Component {
     }))
   }
 
-  toggleCheckbox = () => {
-    const {onChangeUserCheckbox, users} = this.props
+  onChangeCheckBox = () => {
+    const {toggleCheckBox, users} = this.props
     const {id} = users
-    onChangeUserCheckbox(id)
+    toggleCheckBox(id)
   }
 
-  onClickDelete = () => {
+  onClickDeleteButton = () => {
     const {deleteUser, users} = this.props
     const {id} = users
     deleteUser(id)
@@ -87,6 +87,7 @@ class Users extends Component {
               placeholder="username"
               value={editName}
             />
+
             <input
               type="text"
               className="email-input"
@@ -94,6 +95,7 @@ class Users extends Component {
               placeholder="email"
               value={editEmail}
             />
+
             <input
               type="text"
               className="role-input"
@@ -101,6 +103,7 @@ class Users extends Component {
               placeholder="role"
               value={editRole}
             />
+
             <button
               type="button"
               className="save-button"
@@ -114,18 +117,28 @@ class Users extends Component {
             <input
               type="checkbox"
               className="user-checkbox"
-              onChange={this.toggleCheckbox}
+              onChange={this.onChangeCheckBox}
               checked={isChecked}
             />
+
             <p className="user-info">{name}</p>
             <p className="user-info">{email}</p>
             <p className="user-info">{role}</p>
             <div className="edit-delate-container">
-              <FiEdit className="edit-icon" onClick={this.onClickEdit} />
-              <AiFillDelete
-                className="delete-icon"
-                onClick={this.onClickDelete}
-              />
+              <button
+                className="edit-icon-button"
+                type="button"
+                onClick={this.onClickEditButton}
+              >
+                <FiEdit className="edit-icon" />
+              </button>
+              <button
+                type="button"
+                className="delete-button"
+                onClick={this.onClickDeleteButton}
+              >
+                <AiFillDelete className="delete-icon" />
+              </button>
             </div>
           </>
         )}

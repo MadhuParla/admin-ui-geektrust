@@ -101,21 +101,15 @@ class App extends Component {
     })
   }
 
-  onChangeUserCheckBox = id => {
-    const {users} = this.state
-    const updatedUsers = users.map(eachUser => {
-      if (eachUser.id === id) {
-        const updatedMemberData = {
-          ...eachUser,
-          isChecked: !eachUser.isChecked,
+  toggleCheckBox = id => {
+    this.setState(prevState => ({
+      users: prevState.users.map(eachUser => {
+        if (eachUser.id === id) {
+          return {...eachUser, isChecked: !eachUser.isChecked}
         }
-        return updatedMemberData
-      }
-      return eachUser
-    })
-    this.setState({
-      users: updatedUsers,
-    })
+        return eachUser
+      }),
+    }))
   }
 
   onToggleCheckAllCheckbox = () => {
@@ -225,7 +219,7 @@ class App extends Component {
                 key={eachUser.id}
                 updateUser={this.updateUser}
                 deleteUser={this.onClickDelete}
-                onChangeUserCheckBox={this.onChangeUserCheckbox}
+                toggleCheckBox={this.toggleCheckBox}
               />
             ))}
           </ul>
