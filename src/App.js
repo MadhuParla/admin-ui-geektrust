@@ -193,7 +193,7 @@ class App extends Component {
     const currentPageUsers = this.getCurrentPageUsers(searchResults)
 
     return (
-      <div>
+      <>
         <input
           type="search"
           value={searchUserInput}
@@ -236,7 +236,7 @@ class App extends Component {
           pagesCount={pagesCount}
           routeTo={this.routeTo}
         />
-      </div>
+      </>
     )
   }
 

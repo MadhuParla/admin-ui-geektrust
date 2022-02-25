@@ -110,7 +110,7 @@ class Users extends Component {
             </button>
           </div>
         ) : (
-          <div>
+          <>
             <input
               type="checkbox"
               className="user-checkbox"
@@ -127,7 +127,7 @@ class Users extends Component {
                 onClick={this.onClickDelete}
               />
             </div>
-          </div>
+          </>
         )}
       </li>
     )

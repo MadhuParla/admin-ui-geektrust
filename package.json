@@ -14,7 +14,8 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-icons": "4.3.1",
-    "react-loader-spinner": "5.1.4"
+    "react-loader-spinner": "5.1.4",
+    "styled-components": "5.3.3"
   },
   "devDependencies": {
     "eslint-config-airbnb": "18.2.1",

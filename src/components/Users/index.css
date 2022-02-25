@@ -1,21 +1,29 @@
 .user-item-list-container {
   display: flex;
   align-items: center;
-  border-bottom: 0.5px solid grey;
+  flex-direction: row;
+  border-bottom: 1px solid gray;
 }
 
 .user-info {
   width: 22vw;
+  font-family: 'Roboto';
 }
 
 .edit-icon {
   font-size: 20px;
 }
 
+.user-checkbox {
+  height: 15px;
+  width: 15px;
+  margin-right: 20vw;
+}
+
 .edit-delate-container {
   display: flex;
-  justify-content: space-around;
   width: 6vw;
+  justify-content: space-around;
 }
 
 .save-button {
@@ -52,4 +60,9 @@
   margin: 6px;
   padding: 8px;
   margin-left: 5vw;
+}
+
+.delete-icon {
+  color: crimson;
+  font-size: 20px;
 }
